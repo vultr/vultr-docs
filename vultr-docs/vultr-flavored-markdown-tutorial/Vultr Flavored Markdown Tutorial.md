@@ -10,7 +10,7 @@ The main differences between Markdown and Vultr Flavored Markdown are as follows
 
 Before submitting your article, please verify your formatting with the preview tab on the submission page.
 
-**The [source Markdown file for this article is available as an example reference](https://ewr1.vultrobjects.com/vultr-docs/5365/Vultr%20Flavored%20Markdown%20Tutorial.md).**
+**The [source Markdown file for this article is available as an example reference](https://github.com/vultr/vultr-docs/blob/main/vultr-docs/vultr-flavored-markdown-tutorial/Vultr%20Flavored%20Markdown%20Tutorial.md).**
 
 ---
 
@@ -27,38 +27,32 @@ A paragraph is simply one or more consecutive lines of text, separated by one or
 
 ## Headers
 
-**NOTE:** H1 headings are added automatically at the top of each Vultr doc. H1 tags are not permitted.
+H1 headings are added automatically at the top of each Vultr doc. **Do not include H1 (\#) in your article.**
 
-    ## This is an H2
+\#\# This is an H2
 
-    ### This is an H3
+\#\#\# This is an H3
 
-    #### This is an H4
+\#\#\#\# This is an H4
 
-    ##### This is an H5
+\#\#\#\#\# This is an H5
 
-    ###### This is an H6
-
-## This is an H2
-
-### This is an H3
-
-#### This is an H4
-
-##### This is an H5
-
-###### This is an H6
+\#\#\#\#\#\# This is an H6
 
 ---
 
 ## Blockquotes
 
-    > This is a **blockquote** with two paragraphs. Lorem ipsum dolor sit amet,
-    > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-    > Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-    > 
-    > Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-    > id sem consectetuer libero luctus adipiscing.
+**Example:**
+
+\> This is a \*\*blockquote\*\* with two paragraphs. Lorem ipsum dolor sit amet,  
+\> consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.  
+\> Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.  
+\>  
+\> Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse  
+\> id sem consectetuer libero luctus adipiscing.  
+
+**Result:**
 
 > This is a **blockquote** with two paragraphs. Lorem ipsum dolor sit amet,
 > consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
@@ -69,15 +63,19 @@ A paragraph is simply one or more consecutive lines of text, separated by one or
 
 ### Nested blockquote
 
-    > This is the first level of quoting.
-    >
-    > > This is nested blockquote.
-    >
-    > Return to the first level blockquote.
+**Example:**
+
+\> This is the first level of quoting.  
+\>  
+\>\> This is nested blockquote.  
+\>  
+\> Return to the first level blockquote.  
+
+**Result:**
 
 > This is the first level of quoting.
 >
-> > This is nested blockquote.
+>> This is nested blockquote.
 >
 > Return to the first level blockquote.
 
@@ -87,9 +85,13 @@ A paragraph is simply one or more consecutive lines of text, separated by one or
 
 ### Unordered list
 
-    * Red
-    * Green
-    * Blue
+**Example:**
+
+\* Red  
+\* Green  
+\* Blue  
+
+**Result:**
 
 * Red
 * Green
@@ -97,9 +99,13 @@ A paragraph is simply one or more consecutive lines of text, separated by one or
 
 ### Ordered list
 
-    1. Bird
-    2. McHale
-    3. Parish
+**Example:**
+
+    1. Bird  
+    2. McHale  
+    3. Parish  
+
+**Result:**
 
 1. Bird
 2. McHale
@@ -107,16 +113,17 @@ A paragraph is simply one or more consecutive lines of text, separated by one or
 
 ### Ordered list with 2 paragraphs
 
-    1. This is a list item with two paragraphs. Indent the second 
-    paragraph 4 spaces to align with the list. 
+**Example:**
+
+    1. This is a list item with two paragraphs. Indent the second paragraph 4 spaces to align with the list. 
     
-        Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, 
-        risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
+        Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
     
     2. This is the second list item.
 
-1. This is a list item with two paragraphs. Indent the second 
-paragraph 4 spaces to align with the list.
+**Result:**
+
+1. This is a list item with two paragraphs. Indent the second paragraph 4 spaces to align with the list.
 
     Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, 
  risus. Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
@@ -127,110 +134,148 @@ paragraph 4 spaces to align with the list.
 
 ## Code Blocks
 
-Code blocks are indented with 4 spaces.  
+Code blocks are indented with 4 spaces. Do not use backticks.
 
-    tell application "Foo"
-        beep
-    end tell
+    int main() {
+        std::cout << "Hello World!";
+        return 0;
+    }
 
 ### Inline code
 
+Use a single backtick for inline code.
+
+**Example:**
+
+Use the \`printf()\` function.  
+
+**Result:**
+
 Use the `printf()` function.  
 
-``There is a literal backtick (`) here.``
+### Literal backticks
 
-Please don't use `<blink>` tags.  
+Wrap a command with two backticks if you need to show a literal backtick.
 
-`&#8212;` is the decimal-encoded equivalent of `&mdash;`.  
+**Example:**
+
+There is a \`\`literal backtick (\`)\`\` here.
+
+**Result:**
+
+There is a ``literal backtick (`)`` here.
 
 ### Code blocks in Lists
 
-Code blocks in lists are **indented by 8 spaces**. The first 4 spaces make it a part of the list, the next 4 spaces make it a code block.
+Code blocks in lists are **indented by eight spaces**. Text indented by four spaces become part of the list item.
 
-1. Compile the following code:
+**Example:**
 
-        tell application "Foo"
-            beep
-        end tell
+    1. This is item one.
 
-2. Run the program.
-3. Check the output.
+        Here is the code for item one.
 
----
+            int main() {
+                std::cout << "Hello World!";
+                return 0;
+            }
+
+    2. This is item two.
+    3. This is item three.
+
+**Result:**
+
+1. This is item one.
+
+    Here is the code for item one:
+
+        int main() {
+            std::cout << "Hello World!";
+            return 0;
+        }
+
+2. This is item two.
+3. This is item three.
 
 ### Horizontal Rules
 
 Use three hyphens to make a horizontal rule.
 
-    ---
+**Example:**
+
+\---
+
+**Result:**
 
 ---
 
 ## Links
 
+We support inline links, which are preferred for ease of editing and review. Please do not use reference-style links. 
+
 ### Inline links
 
-    This is [an example](http://example.com/ "The Link Title") inline link, titled "The Link Title".  
-    [This link](http://example.net/) has no title attribute.  
-    Return to the [Index](/) page.  
+**Example:**
+
+This is \[an example\]\(http://example.com/ "The Link Title"\) inline link, titled "The Link Title".  
+\[This link\]\(http://example.net/\) has no title attribute.  
+
+**Result:**
 
 This is [an example](http://example.com/ "The Link Title") inline link, titled "The Link Title".  
 [This link](http://example.net/) has no title attribute.  
-Return to the [Index](/) page.  
 
-### Reference links
+**Please do not use reference-style links, like this example:**
 
-    Find us on [Google][]  
-    
-    [Google]: http://google.com/
-    
-    Some popular search engines are [Google] [1],
-    [Yahoo] [2], and [MSN] [3].  
-    
-    [1]: http://google.com/        "Google"
-    [2]: http://search.yahoo.com/  "Yahoo Search"
-    [3]: http://search.msn.com/    "MSN Search"
+    Some popular search engines are [Google][1], [Yahoo][2], and [MSN][3].  
 
-Find us on [Google][]  
+    [1]: http://google.com/ "Google"  
+    [2]: http://search.yahoo.com/ "Yahoo Search"  
+    [3]: http://search.msn.com/ "MSN Search"  
 
-[Google]: http://google.com/
-
-Some popular search engines are [Google] [1],
-[Yahoo] [2], and [MSN] [3].  
-
-[1]: http://google.com/        "Google"
-[2]: http://search.yahoo.com/  "Yahoo Search"
-[3]: http://search.msn.com/    "MSN Search"
 
 ### Automatic links
 
-    Make automatic links for URLs and email addresses:
-    <http://example.com/> and <address@example.com>  
+Wrap URLs with angle brackets to make an automatic link.
 
-Make automatic links for URLs and email addresses:
-<http://example.com/> and <address@example.com>  
+**Example:**
+
+    Make automatic links for URLs and email addresses like this: 
+    <http://example.com/> and <address@example.com>
+
+**Result:**
+
+Make automatic links for URLs and email addresses like this: <http://example.com/> and <address@example.com>  
 
 ---
 
 ## Emphasis
 
-    *single asterisks*  
-    _single underscores_  
-    **double asterisks**  
-    __double underscores__  
-    middle**of**word  
+**Example:**
 
-*single asterisks*  
-_single underscores_  
-**double asterisks**  
-__double underscores__  
-middle**of**word  
+\*single asterisks make italic text\*  
+\_single underscores make italic text\_  
+\*\*double asterisks make bold text\*\*  
+\_\_double underscores make bold text\_\_  
+This also works in the middle\*\*of\*\*words
 
-Note: It's common to have variable names in technical documents with underscores. Be careful to escape your underscores if you are referring to a string with literal underscores outside a code block. See examples:
+**Result:**
+
+*single asterisks make italic text*  
+_single underscores make italic text_  
+**double asterisks make bold text**  
+__double underscores make bold text__  
+This also works in the middle**of**words
+
+Note: It's common to have variable names in technical documents with underscores. Be careful to escape your underscores!
+
+**Correct:**  
 
     THE\_EXAMPLE\_VARIABLE
 
 THE\_EXAMPLE\_VARIABLE
+
+**Incorrect:**  
 
     THE_EXAMPLE_VARIABLE
 
@@ -242,31 +287,51 @@ THE_EXAMPLE_VARIABLE
 
 Use a backslash to escape special characters.
 
-    \*this text is surrounded by literal asterisks\*  
-    \\ \` \* \_ \{\} \[\] \(\) \# \+ \- \. \!  
+**Example:**
+
+\\\*this text is surrounded by literal asterisks\\\*  
+\\\\  
+\\\`  
+\\\*  
+\\\_  
+\\\{\\\}  
+\\\[\\\]  
+\\\(\\\)  
+\\\#  
+\\\+  
+\\\-  
+\\\.  
+\\\!  
+
+**Result:**
 
 \*this text is surrounded by literal asterisks\*  
-\\ \` \* \_ \{\} \[\] \(\) \# \+ \- \. \!  
+\\  
+\`  
+\*  
+\_  
+\{\}  
+\[\]  
+\(\)  
+\#  
+\+  
+\-  
+\.  
+\!  
 
 ---
 
 ## Automatic Escaping for Special Characters
 
-### Copyright HTML entity
+**Copyright HTML entity:**
 
     &copy;  
 
 &copy;
 
-### Ampersands are converted automatically without delimiters.
-
-    AT&T
+**Ampersands and angle brackets are converted automatically without delimiters.**
 
 AT&T
-
-### Angle brackets are also converted properly without delimiters.
-
-    4 < 5 = 5 > 4
 
 4 < 5 = 5 > 4
 
@@ -274,7 +339,10 @@ AT&T
 
 ## Keyboard
 
-Literal keystrokes are represented with short-codes.
+Literal keystrokes are represented with short-codes. You should distinguish uppercase/lowercase with the shift key.
+
+* :key_x: : type a lowercase "x".
+* :key_shift:+:key_x: : type an uppercase "X".
 
 ### Function Keys
 
@@ -307,15 +375,19 @@ Literal keystrokes are represented with short-codes.
 
 ### Example usage:
 
-Save the file by pressing :key\_ctrl: + :key\_x:, then :key\_y:.
+Save the file by pressing :key\_ctrl:+:key\_x:, then :key\_y:.
 
-Save the file by pressing :key_ctrl: + :key_x:, then :key_y:.
+Save the file by pressing :key_ctrl:+:key_x:, then :key_y:.
 
 ---
 
 ## Tables
 
+General table syntax and an example:
+
 ![TableExample](https://ewr1.vultrobjects.com/vultr-docs/5365/TableExample.png)
+
+**Result:**
 
 |table|100|
 |thead|
