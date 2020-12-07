@@ -6,9 +6,10 @@ The main differences between Markdown and Vultr Flavored Markdown are as follows
 
 * Vultr Markdown does not allow inline HTML. You may only use plain text with Markdown formatting.
 * Links must start with either the **http://** or **https://** URL scheme. Other URL schemes are stripped.
-* Vultr Markdown does not support image links. If you would like to add an image, place a link to the image where you would like it to appear in your article. Our team will add it when publishing your article.
+* Vultr [table formatting](https://www.vultr.com/docs/vultr-flavored-markdown-tutorial#Tables) differs from most other Markdown variants. 
+* Vultr has a [special syntax](https://www.vultr.com/docs/vultr-flavored-markdown-tutorial#Keyboard) to represent keystrokes.
 
-Before submitting your article, please verify your formatting with the preview tab on the submission page.
+Please verify your formatting with the preview tab on the submission page. For security, image links do not display in preview on [the submission page](https://my.vultr.com/docs/submit/).
 
 **The [source Markdown file for this article is available as an example reference](https://github.com/vultr/vultr-docs/blob/main/vultr-docs/vultr-flavored-markdown-tutorial/Vultr%20Flavored%20Markdown%20Tutorial.md).**
 
