@@ -3,7 +3,7 @@
 ################################################
 ## Build example snapshot for Vultr Marketplace
 ## Tested on Ubuntu 20.04
-################################################ 
+################################################
 
 ######################
 ## Prerequisite steps
@@ -84,10 +84,12 @@ cat /dev/null > /var/log/lastlog
 cat /dev/null > /var/log/wtmp
 
 ## Wipe unused disk space with zeros for security and compression.
-echo "Clearing disk free space."
+echo
+echo "Clearing disk free space. This may take several minutes."
+echo
 dd if=/dev/zero of=/zerofile status=progress
 sync
 rm /zerofile
 sync
-
-echo "setup-snapshot.sh is complete."
+echo
+echo "Setup is complete. Beginning snapshot process."
