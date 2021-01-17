@@ -5,14 +5,16 @@
 ## Tested on Ubuntu 20.04
 ################################################ 
 
-
 ######################
 ## Prerequisite steps
 ######################
-
 ## Verify the /tmp directory exists and has the proper permissions.
-mkdir /tmp
-chmod 1777 /tmp
+if [ ! -d /tmp ]
+then
+    mkdir /tmp
+    chmod 1777 /tmp
+fi
+cd /tmp
 
 ## Update the server.
 apt-get -y update
@@ -23,7 +25,6 @@ apt-get -y autoclean
 ######################
 ## Install vultr-support branch of cloud-init
 ######################
-cd /tmp
 wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_universal_latest.deb
 md5sum cloud-init_universal_latest.deb
 apt update -y

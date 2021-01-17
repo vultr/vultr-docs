@@ -1,20 +1,19 @@
 #!/bin/bash
 
+#################################################
 ## Setup Packer build environment and create a Marketplace snapshot
 ## Tested on Ubuntu 20.04
-
-#################################################
 ##
-## Prerequisites: Update with your information.
+## Prerequisites: 
 ##
-#################################################
 ## Update with your API Key
 export VULTR_API_KEY=xxxxxxx_MY_VULTR_API_KEY_xxxxxxx
-## Set PACKER_LOG=1 to enable logging.
-export PACKER_LOG=0
+## Set PACKER_LOG=0 to disable logging.
+export PACKER_LOG=1
 ## Set to your preferred log path
 export PACKER_LOG_PATH=~/Marketplace/packer.log
-
+##
+#################################################
 
 ## Install HashiCorp Packer
 dpkg -s packer &> /dev/null
@@ -43,22 +42,22 @@ fi
 ## Download scripts and packer template
 if [ ! -f ~/Marketplace/per-boot-setup.sh ]
 then
-    wget https://raw.githubusercontent.com/dfinr/vultr-docs/main/faq/vultr-marketplace/per-boot-setup.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/per-boot-setup.sh
 fi
 
 if [ ! -f ~/Marketplace/per-instance-provision.sh ]
 then
-    wget https://raw.githubusercontent.com/dfinr/vultr-docs/main/faq/vultr-marketplace/per-instance-provision.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/per-instance-provision.sh
 fi
 
 if [ ! -f ~/Marketplace/setup-snapshot.sh ]
 then
-    wget https://raw.githubusercontent.com/dfinr/vultr-docs/main/faq/vultr-marketplace/setup-snapshot.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/setup-snapshot.sh
 fi
 
 if [ ! -f ~/Marketplace/marketplace.json ]
 then
-    wget https://raw.githubusercontent.com/dfinr/vultr-docs/main/faq/vultr-marketplace/marketplace.json
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/marketplace.json
 fi
 
 ## Build a snapshot in your Vultr account.
