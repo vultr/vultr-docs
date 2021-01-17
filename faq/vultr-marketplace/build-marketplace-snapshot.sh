@@ -18,7 +18,8 @@ export PACKER_LOG_PATH=~/Marketplace/packer.log
 
 ## Install HashiCorp Packer
 dpkg -s packer &> /dev/null
-if [ $? -ne 0 ] then
+if [ $? -ne 0 ]
+then
     curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
     apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
     apt-get update && sudo apt-get install packer
