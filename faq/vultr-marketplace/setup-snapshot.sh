@@ -79,16 +79,15 @@ rm -f /var/lib/systemd/random-seed
 rm -f /etc/machine-id
 touch /etc/machine-id
 
-## Wipe unused disk space with zeros for security and compression.
-dd if=/dev/zero of=/zerofile
-sync
-rm /zerofile
-sync
-
 ## Clear the login log history.
 cat /dev/null > /var/log/lastlog
 cat /dev/null > /var/log/wtmp
 
-## Halt the server
-## Vultr can snapshot a running server, but you may prefer a clean shutdown.
-shutdown -h now
+## Wipe unused disk space with zeros for security and compression.
+echo "Clearing disk free space."
+dd if=/dev/zero of=/zerofile status=progress
+sync
+rm /zerofile
+sync
+
+echo "setup-snapshot.sh is complete."
