@@ -85,11 +85,12 @@ cat /dev/null > /var/log/wtmp
 
 ## Wipe unused disk space with zeros for security and compression.
 echo
-echo "Clearing disk free space. This may take several minutes."
+echo "Clearing free disk space. This may take several minutes."
 echo
 dd if=/dev/zero of=/zerofile status=progress
 sync
 rm /zerofile
 sync
 echo
-echo "Setup is complete. Beginning snapshot process."
+echo "Setup is complete. Begin snapshot process."
+echo

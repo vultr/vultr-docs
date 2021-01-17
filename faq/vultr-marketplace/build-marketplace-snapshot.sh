@@ -4,7 +4,7 @@
 ## Setup Packer build environment and create a Marketplace snapshot
 ## Tested on Ubuntu 20.04
 ##
-## Prerequisites: 
+## Prerequisites:
 ##
 ## Update with your API Key
 export VULTR_API_KEY=xxxxxxx_MY_VULTR_API_KEY_xxxxxxx
