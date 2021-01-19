@@ -8,10 +8,11 @@
 ##
 ## Prerequisites:
 ##
-## Set your Vultr API Key before running this script, and allow the IP address of the workstation. 
-## https://my.vultr.com/settings/#settingsapi
+## 1. Allow API access for this workstation.
+##    https://my.vultr.com/settings/#settingsapi
 ##
-## Example: 
+## 2. Export your Vultr API Key before running this script.
+##    Example:
 ##
 ##        # export VULTR_API_KEY=[your Vultr API key]
 ##
