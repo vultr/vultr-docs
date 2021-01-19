@@ -1,17 +1,26 @@
 #!/bin/bash
 
 #################################################
-## Setup Packer build environment and create a Marketplace snapshot
-## Tested on Ubuntu 20.04
+## Setup Packer build environment and create a Marketplace snapshot.
+## Tested on an Ubuntu 20.04 instance with 1024MB Memory.
+##
+## See details: https://www.vultr.com/docs/vultr-marketplace-quickstart-guide
 ##
 ## Prerequisites:
 ##
-## Update with your API Key
-export VULTR_API_KEY=xxxxxxx_MY_VULTR_API_KEY_xxxxxxx
+## Set your Vultr API Key before running this script, and allow the IP address of the workstation. 
+## https://my.vultr.com/settings/#settingsapi
+##
+## Example: 
+##
+##        # export VULTR_API_KEY=[your Vultr API key]
+##
+## Optional:
+##
 ## Set PACKER_LOG=0 to disable logging.
-export PACKER_LOG=1
-## Set to your preferred log path
-export PACKER_LOG_PATH=~/Marketplace/packer.log
+##        # export PACKER_LOG=1
+## Set the log path
+##        # export PACKER_LOG_PATH=~/packer.log
 ##
 #################################################
 
