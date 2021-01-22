@@ -86,6 +86,7 @@ cat /dev/null > /var/log/lastlog
 cat /dev/null > /var/log/wtmp
 
 ## Wipe unused disk space with zeros for security and compression.
+set +eo pipefail
 echo
 echo "Clearing free disk space. This may take several minutes."
 echo
