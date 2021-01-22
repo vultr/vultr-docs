@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eo pipfail
 
 ################################################
 ## Build example snapshot for Vultr Marketplace
@@ -28,6 +29,7 @@ apt-get -y autoclean
 wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_universal_latest.deb
 md5sum cloud-init_universal_latest.deb
 apt-get update -y
+apt install -y python3-pip
 dpkg -i cloud-init_universal_latest.deb
 apt-get install -f -y
 
