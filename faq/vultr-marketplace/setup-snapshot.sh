@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eo pipfail
+set -eo pipefail
 
 ################################################
 ## Build example snapshot for Vultr Marketplace
