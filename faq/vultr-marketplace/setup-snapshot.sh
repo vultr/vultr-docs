@@ -29,13 +29,16 @@ apt-get -y autoclean
 wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_universal_latest.deb
 md5sum cloud-init_universal_latest.deb
 apt-get update -y
-sleep 5
+sleep 10
 
 apt install -y python3-pip
-sleep 5
+sleep 10
 
 dpkg -i cloud-init_universal_latest.deb
+sleep 10
+
 apt-get install -f -y
+sleep 10
 
 ## Create script folders for cloud-init
 mkdir -p /var/lib/cloud/scripts/per-instance/
