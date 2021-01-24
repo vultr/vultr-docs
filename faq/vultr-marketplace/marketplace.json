@@ -8,12 +8,12 @@
     "builders": [{
         "type": "vultr",
         "api_key": "{{ user `vultr_api_key` }}",
-        "snapshot_description": "Marketplace Test {{isotime \"2006-01-02 15:04\"}}",
+        "snapshot_description": "Marketplace {{isotime \"2006-01-02 15:04\"}}",
         "region_id": "ewr",
         "plan_id": "vc2-1c-1gb",
         "os_id": "387",
         "ssh_username": "root",
-        "state_timeout": "15m"
+        "state_timeout": "25m"
     }],
     "provisioners": [{
             "type": "file",
