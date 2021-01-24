@@ -32,7 +32,7 @@
     ],
     "post-processors": [{
             "type": "shell-local",
-            "inline": ["echo Marketplace build is complete. > /root/Marketplace_Complete"]
+            "inline": ["echo "Marketplace build has finished." > /root/packer.log"]
         }
     ]
 }
