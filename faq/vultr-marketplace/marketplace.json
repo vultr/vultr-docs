@@ -29,5 +29,10 @@
             "type": "shell",
             "script": "setup-snapshot.sh"
         }
+    ],
+    "post-processors": [{
+            "type": "shell-local",
+            "inline": ["echo Marketplace build is complete. > /root/Marketplace_Complete"]
+        }
     ]
 }
