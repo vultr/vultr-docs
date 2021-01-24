@@ -23,9 +23,9 @@ apt-get -y upgrade
 apt-get -y autoremove
 apt-get -y autoclean
 
-######################
+#############################################
 ## Install vultr-support branch of cloud-init
-######################
+#############################################
 wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_universal_latest.deb
 md5sum cloud-init_universal_latest.deb
 apt-get update -y
@@ -52,9 +52,9 @@ mv /tmp/per-boot-setup.sh /var/lib/cloud/scripts/per-boot/setup.sh
 chmod +x /var/lib/cloud/scripts/per-instance/provision.sh
 chmod +x /var/lib/cloud/scripts/per-boot/setup.sh
 
-######################
+##########################################
 ## Prepare server snapshot for Marketplace
-######################
+##########################################
 
 ## Clean the temporary directories, SSH keys, logs, history, etc.
 rm -rf /tmp/*
@@ -94,13 +94,9 @@ cat /dev/null > /var/log/wtmp
 
 ## Wipe unused disk space with zeros for security and compression.
 set +eo pipefail
-echo
 echo "Clearing free disk space. This may take several minutes."
-echo
 dd if=/dev/zero of=/zerofile status=progress
 sync
 rm /zerofile
 sync
-echo
 echo "Setup is complete. Begin snapshot process."
-echo
