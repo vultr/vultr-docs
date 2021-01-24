@@ -72,3 +72,5 @@ fi
 
 ## Build a snapshot in your Vultr account.
 packer build marketplace.json
+
+echo "Marketplace build is complete." > /root/mkt-builder.log"
