@@ -35,26 +35,26 @@ then
 fi
 
 ## Switch to tmp
-cd "${TMPDIR:=/tmp}"
+cd /tmp
 
 ## Install Vultr plugin for packer
-if [ ! -f ./packer-builder-vultr ]
+if [ ! -f /tmp/packer-builder-vultr ]
 then
     wget https://github.com/vultr/packer-builder-vultr/releases/download/v2.0.1/packer-builder-vultr_2.0.1_linux_64-bit.tar.gz
     tar -xvf packer-builder-vultr_2.0.1_linux_64-bit.tar.gz
-    chmod +x ./packer-builder-vultr
+    chmod +x /tmp/packer-builder-vultr
 fi
 
 ## Download scripts and packer template
-if [ ! -f ./setup-snapshot.sh ]
+if [ ! -f /tmp/setup-snapshot.sh ]
 then
     wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/apt-setup.sh
 fi
 
-if [ ! -f ./marketplace.json ]
+if [ ! -f /tmp/marketplace.json ]
 then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/marketplace.json
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/apt-marketplace.json
 fi
 
 ## Build a snapshot in your Vultr account.
-packer build marketplace.json
+packer build /tmp/apt-marketplace.json
