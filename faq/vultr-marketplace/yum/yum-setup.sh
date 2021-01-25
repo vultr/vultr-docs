@@ -1,9 +1,10 @@
 #!/bin/bash
-set -eo pipefail
+
+# set -eo pipefail
 
 ################################################
 ## Build example snapshot for Vultr Marketplace
-## Tested on Ubuntu 20.04
+## Tested on CentOS 7
 ################################################
 
 ######################
@@ -12,7 +13,10 @@ set -eo pipefail
 
 ## Update the server.
 yum check-update
+echo $?
+
 yum update
+echo $?
 
 #############################################
 ## Install vultr-support branch of cloud-init
@@ -93,7 +97,7 @@ cat /dev/null > /var/log/lastlog
 cat /dev/null > /var/log/wtmp
 
 ## Wipe unused disk space with zeros for security and compression.
-set +eo pipefail
+# set +eo pipefail
 echo "Clearing free disk space. This may take several minutes."
 dd if=/dev/zero of=/zerofile status=progress
 sync
