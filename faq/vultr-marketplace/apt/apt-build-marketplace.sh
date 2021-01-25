@@ -46,19 +46,9 @@ then
 fi
 
 ## Download scripts and packer template
-if [ ! -f ./per-boot-setup.sh ]
-then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/per-boot-setup.sh
-fi
-
-if [ ! -f ./per-instance-provision.sh ]
-then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/per-instance-provision.sh
-fi
-
 if [ ! -f ./setup-snapshot.sh ]
 then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/setup-snapshot.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/apt-setup.sh
 fi
 
 if [ ! -f ./marketplace.json ]
