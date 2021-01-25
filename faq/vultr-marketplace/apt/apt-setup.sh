@@ -9,8 +9,6 @@ set -eo pipefail
 ######################
 ## Prerequisite steps
 ######################
-## Switch to tmp
-cd "${TMPDIR:=/tmp}"
 
 ## Update the server.
 apt-get -y update
@@ -21,12 +19,18 @@ apt-get -y autoclean
 #############################################
 ## Install vultr-support branch of cloud-init
 #############################################
+cd /tmp
 wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_universal_latest.deb
-echo MD5SUM: $(md5sum cloud-init_universal_latest.deb)
+wget https://ewr1.vultrobjects.com/cloud_init_beta/universal_latest_MD5
+sleep 10
+echo "Expected MD5SUM:"
+cat /tmp/universal_latest_MD5
+echo "Computed MD5SUM:"
+echo "$(md5sum /tmp/cloud-init_universal_latest.deb)"
 apt-get update -y
 sleep 10
 
-apt install -y cloud-init_universal_latest.deb
+apt-get install -y /tmp/cloud-init_universal_latest.deb
 sleep 10
 
 apt-get install -f -y
