@@ -12,10 +12,8 @@
 ######################
 
 ## Update the server.
-yum check-update
-echo $?
 
-yum update
+yum update -y
 echo $?
 
 #############################################
