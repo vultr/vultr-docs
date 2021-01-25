@@ -33,9 +33,6 @@ sleep 10
 apt-get install -y /tmp/cloud-init_universal_latest.deb
 sleep 10
 
-apt-get install -f -y
-sleep 10
-
 ## Create script folders for cloud-init
 mkdir -p /var/lib/cloud/scripts/per-boot/
 mkdir -p /var/lib/cloud/scripts/per-instance/
