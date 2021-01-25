@@ -9,13 +9,8 @@ set -eo pipefail
 ######################
 ## Prerequisite steps
 ######################
-## Verify the /tmp directory exists and has the proper permissions.
-if [ ! -d /tmp ]
-then
-    mkdir /tmp
-    chmod 1777 /tmp
-fi
-cd /tmp
+## Switch to tmp
+cd "${TMPDIR:=/tmp}"
 
 ## Update the server.
 apt-get -y update
@@ -27,30 +22,37 @@ apt-get -y autoclean
 ## Install vultr-support branch of cloud-init
 #############################################
 wget https://ewr1.vultrobjects.com/cloud_init_beta/cloud-init_universal_latest.deb
-md5sum cloud-init_universal_latest.deb
+echo MD5SUM: $(md5sum cloud-init_universal_latest.deb)
 apt-get update -y
 sleep 10
 
-apt install -y python3-pip
-sleep 10
-
-dpkg -i cloud-init_universal_latest.deb
+apt install -y cloud-init_universal_latest.deb
 sleep 10
 
 apt-get install -f -y
 sleep 10
 
 ## Create script folders for cloud-init
-mkdir -p /var/lib/cloud/scripts/per-instance/
 mkdir -p /var/lib/cloud/scripts/per-boot/
+mkdir -p /var/lib/cloud/scripts/per-instance/
 
-## Install the cloud-init scripts that Packer uploaded.
-mv /tmp/per-instance-provision.sh /var/lib/cloud/scripts/per-instance/provision.sh
-mv /tmp/per-boot-setup.sh /var/lib/cloud/scripts/per-boot/setup.sh
+## Make a per-boot script.
+cat << EOFBOOT > /var/lib/cloud/scripts/per-boot/setup.sh
+#!/bin/bash
+## Run on every boot.
+echo $(date -u) : System booted. >> /var/log/per-boot.log
+EOFBOOT
+
+## Make a per-instance script.
+cat << EOFINSTANCE > /var/lib/cloud/scripts/per-instance/provision.sh
+#!/bin/bash
+## Runs once-and-only-once at first boot per instance.
+echo $(date -u) : System provisioned. >> /var/log/per-instance.log
+EOFINSTANCE
 
 # Make the scripts executable
-chmod +x /var/lib/cloud/scripts/per-instance/provision.sh
 chmod +x /var/lib/cloud/scripts/per-boot/setup.sh
+chmod +x /var/lib/cloud/scripts/per-instance/provision.sh
 
 ##########################################
 ## Prepare server snapshot for Marketplace

@@ -16,18 +16,8 @@
         "state_timeout": "25m"
     }],
     "provisioners": [{
-            "type": "file",
-            "source": "per-instance-provision.sh",
-            "destination": "/tmp/per-instance-provision.sh"
-        },
-        {
-            "type": "file",
-            "source": "per-boot-setup.sh",
-            "destination": "/tmp/per-boot-setup.sh"
-        },
-        {
             "type": "shell",
-            "script": "setup-snapshot.sh"
+            "script": "apt-setup.sh"
         }
     ]
 }

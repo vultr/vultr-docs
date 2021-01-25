@@ -34,40 +34,36 @@ then
     apt-get update && sudo apt-get install packer
 fi
 
-## Create a working folder
-if [ ! -d ~/Marketplace ]
-then
-    mkdir ~/Marketplace
-fi
-cd ~/Marketplace
+## Switch to tmp
+cd "${TMPDIR:=/tmp}"
 
 ## Install Vultr plugin for packer
-if [ ! -f ~/Marketplace/packer-builder-vultr ]
+if [ ! -f ./packer-builder-vultr ]
 then
     wget https://github.com/vultr/packer-builder-vultr/releases/download/v2.0.1/packer-builder-vultr_2.0.1_linux_64-bit.tar.gz
     tar -xvf packer-builder-vultr_2.0.1_linux_64-bit.tar.gz
-    chmod +x ~/Marketplace/packer-builder-vultr
+    chmod +x ./packer-builder-vultr
 fi
 
 ## Download scripts and packer template
-if [ ! -f ~/Marketplace/per-boot-setup.sh ]
+if [ ! -f ./per-boot-setup.sh ]
 then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/per-boot-setup.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/per-boot-setup.sh
 fi
 
-if [ ! -f ~/Marketplace/per-instance-provision.sh ]
+if [ ! -f ./per-instance-provision.sh ]
 then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/per-instance-provision.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/per-instance-provision.sh
 fi
 
-if [ ! -f ~/Marketplace/setup-snapshot.sh ]
+if [ ! -f ./setup-snapshot.sh ]
 then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/setup-snapshot.sh
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/setup-snapshot.sh
 fi
 
-if [ ! -f ~/Marketplace/marketplace.json ]
+if [ ! -f ./marketplace.json ]
 then
-    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/marketplace.json
+    wget https://raw.githubusercontent.com/vultr/vultr-docs/main/faq/vultr-marketplace/apt/marketplace.json
 fi
 
 ## Build a snapshot in your Vultr account.
