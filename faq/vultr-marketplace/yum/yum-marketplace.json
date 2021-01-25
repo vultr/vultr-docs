@@ -1,0 +1,23 @@
+{
+    "variables": {
+        "vultr_api_key": "{{ env `VULTR_API_KEY` }}"
+    },
+    "sensitive-variables": [
+        "vultr_api_key"
+    ],
+    "builders": [{
+        "type": "vultr",
+        "api_key": "{{ user `vultr_api_key` }}",
+        "snapshot_description": "MKT-CentOS {{isotime \"2006-01-02 15:04\"}}",
+        "region_id": "ewr",
+        "plan_id": "vc2-1c-1gb",
+        "os_id": "167",
+        "ssh_username": "root",
+        "state_timeout": "25m"
+    }],
+    "provisioners": [{
+            "type": "shell",
+            "script": "yum-setup.sh"
+        }
+    ]
+}
