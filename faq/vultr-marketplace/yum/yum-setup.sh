@@ -78,7 +78,7 @@ cat /dev/null > /root/.bash_history
 unset HISTFILE
 
 ## Update the mlocate database.
-/usr/bin/updatedb
+## /usr/bin/updatedb
 
 ## Wipe random seed files.
 rm -f /var/lib/systemd/random-seed
