@@ -1,6 +1,4 @@
 #!/bin/bash
-set -eo pipefail
-
 ################################################
 ## Build example snapshot for Vultr Marketplace
 ## Tested on CentOS 7
@@ -10,6 +8,7 @@ set -eo pipefail
 ## Prerequisite steps
 ######################
 
+set -eo pipefail
 ## Update the server.
 yum update -y
 
@@ -51,6 +50,7 @@ EOFINSTANCE
 chmod +x /var/lib/cloud/scripts/per-boot/setup.sh
 chmod +x /var/lib/cloud/scripts/per-instance/provision.sh
 
+set +eo pipefail
 ##########################################
 ## Prepare server snapshot for Marketplace
 ##########################################
@@ -78,7 +78,7 @@ cat /dev/null > /root/.bash_history
 unset HISTFILE
 
 ## Update the mlocate database.
-## /usr/bin/updatedb
+/usr/bin/updatedb
 
 ## Wipe random seed files.
 rm -f /var/lib/systemd/random-seed
@@ -92,7 +92,6 @@ cat /dev/null > /var/log/lastlog
 cat /dev/null > /var/log/wtmp
 
 ## Wipe unused disk space with zeros for security and compression.
-# set +eo pipefail
 echo "Clearing free disk space. This may take several minutes."
 dd if=/dev/zero of=/zerofile status=progress
 sync
