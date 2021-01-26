@@ -36,14 +36,14 @@ mkdir -p /var/lib/cloud/scripts/per-instance/
 cat << "EOFBOOT" > /var/lib/cloud/scripts/per-boot/setup.sh
 #!/bin/bash
 ## Run on every boot.
-echo "$(date -u) : System booted." >> /var/log/per-boot.log
+echo $(date -u) ": System booted." >> /var/log/per-boot.log
 EOFBOOT
 
 ## Make a per-instance script.
 cat << "EOFINSTANCE" > /var/lib/cloud/scripts/per-instance/provision.sh
 #!/bin/bash
 ## Runs once-and-only-once at first boot per instance.
-echo "$(date -u) : System provisioned." >> /var/log/per-instance.log
+echo $(date -u) ": System provisioned." >> /var/log/per-instance.log
 EOFINSTANCE
 
 # Make the scripts executable
