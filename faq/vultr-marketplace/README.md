@@ -1,3 +1,5 @@
-# Supporting Files
+# Vultr Marketplace Quickstart Guide
 
-Support files for the article [Vultr Marketplace Quickstart Guide](https://www.vultr.com/docs/vultr-marketplace-quickstart-guide).
+See the article [Vultr Marketplace Quickstart Guide](https://www.vultr.com/docs/vultr-marketplace-quickstart-guide) for more information.
+
+Use the files in <yum/> for CentOS 7, and <apt/> for Ubuntu 20.04.
