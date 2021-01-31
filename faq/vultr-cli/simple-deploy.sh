@@ -1,15 +1,16 @@
 #!/bin/bash
 
 ########################################################
+## PREREQUISITES
 ##
 ## 1. Export your Vultr API key.
-##
 ##        export VULTR_API_KEY=<your API key>
 ##
 ## 2. Add your IP address to the Access Control list.
-##
 ##        https://my.vultr.com/settings/#settingsapi
 ##
+## 3. Install 'vultr-cli' in your path.
+##        https://github.com/vultr/vultr-cli#installation
 ########################################################
 
 ## Select an OS
@@ -95,12 +96,12 @@ PLAN_ID=vc2-1c-1gb
 # vhf-6c-24gb     6     24576  448   6144       144    vhf   [ewr ord dfw lax atl lhr fra syd icn mia]
 # vhf-8c-32gb     8     32768  512   7168       192    vhf   [ord dfw lax atl lhr fra syd icn mia]
 # vhf-12c-48gb    12    49152  768   8192       256    vhf   [ord dfw lax fra syd icn]
-             
+
 ###################################################
-## Deploy the instance. For example: 
+## Deploy the instance. For example:
 ##
 ##     vultr-cli instance create --os 387 --region ewr --plan vc2-1c-1gb
-## 
+##
 ## The CLI returns the Instance ID in the second
 ## column of the line that begins with 'ID'.
 ##
