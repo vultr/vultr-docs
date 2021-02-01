@@ -44,7 +44,7 @@ echo "Creating resources for $UNIQUE_LABEL"
 ## For example, add your Vultr API key to root profile.
 SCRIPT_TEXT="
 #!/bin/sh
-echo 'export VULTR_API_KEY=$VULTR_API_KEY' >> /root/.profile
+echo 'echo The $UNIQUE_LABEL startup script added this line to ~/.profile' >> /root/.profile
 "
 
 ## Step 2: Base64 encode the script.
