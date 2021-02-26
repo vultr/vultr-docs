@@ -40,7 +40,7 @@ cd /tmp
 ## Install Vultr plugin for packer
 if [ ! -f /tmp/packer-builder-vultr ]
 then
-    wget https://github.com/vultr/packer-builder-vultr/releases/download/v2.0.1/packer-builder-vultr_2.0.1_linux_64-bit.tar.gz
+    wget https://github.com/vultr/packer-builder-vultr/releases/download/v2.2.1/packer-builder-vultr_2.2.1_linux_64-bit.tar.gz
     tar -xvf packer-builder-vultr_2.0.1_linux_64-bit.tar.gz
     chmod +x /tmp/packer-builder-vultr
 fi
