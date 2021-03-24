@@ -47,3 +47,6 @@ dd if=/dev/zero of=/zerofile status=progress
 sync
 rm /zerofile
 sync
+
+## Shutdown
+shutdown -h now
