@@ -1,7 +1,10 @@
 # Vultr Docs
 
-To learn more this repository, see the [information page](https://vultr.github.io/vultr-docs/).
+If you'd like to write for Vultr Docs, see information about:
 
-If you'd like to write for Vultr Docs and you are looking for topic inspiration, we have many writing opportunities available! Please see our [Request for Article list](https://vultr.github.io/vultr-docs/rfa/). 
+* The [Vultr Trusted Author Program](https://www.vultr.com/docs/trusted-author-program)
+* The [Request for Article](https://www.vultr.com/docs/request-for-article) (RFA) list
+* [Vultr Docs Program Guidelines](https://www.vultr.com/docs/vultr-docs-program-guidelines)
+* [Vultr Docs Style Guide](https://www.vultr.com/docs/vultr-docs-style-guide)
 
 [License information](https://vultr.github.io/vultr-docs/license/)
