@@ -48,5 +48,8 @@ sync
 rm /zerofile
 sync
 
+## Discard Unused Filesystem Blocks
+fstrim /
+
 ## Shutdown
 shutdown -h now
