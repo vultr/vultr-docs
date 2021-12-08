@@ -51,7 +51,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 <td valign="top">
 
 |     POP Name    | Code |
-|:---------------:|:----:|
+|:----------------|:----:|
 | Piscataway, NJ  | 11   |
 | Miami, FL       | 12   |
 | Chicago, IL     | 13   |
@@ -65,7 +65,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 <td valign="top">
 
 |     POP Name    | Code |
-|:---------------:|:----:|
+|:----------------|:----:|
 | Mexico, MX      | 28   |
 | Sao Paulo, BR   | 30   |
 | Toronto, CA     | 33   |
@@ -74,7 +74,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 <td valign="top">
 
 |     POP Name    | Code |
-|:---------------:|:----:|
+|:----------------|:----:|
 | London, UK      | 19   |
 | Amsterdam, NE   | 20   |
 | Paris, FR       | 21   |
@@ -87,7 +87,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 <td valign="top">
 
 |     POP Name    | Code |
-|:---------------:|:----:|
+|:----------------|:----:|
 | Tokyo, JP       | 23   |
 | Sydney, AU      | 24   |
 | Singapore, SG   | 25   |
