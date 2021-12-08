@@ -50,56 +50,52 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 <tr>
 <td>
 
-|POP name | POP code |
-|---------|----------|
-| New York | 11      |
+|     POP Name    | Code |
+|:---------------:|:----:|
+| Piscataway, NJ  | 11   |
+| Miami, FL       | 12   |
+| Chicago, IL     | 13   |
+| Atlanta, GA     | 14   |
+| Dallas, TX      | 15   |
+| Seattle, WA     | 16   |
+| Los Angeles, CA | 17   |
+| San Jose, CA    | 18   |
 
 </td>
 <td>
 
-|POP name | POP code |
-|---------|----------|
-| New York | 11      |
+|     POP Name    | Code |
+|:---------------:|:----:|
+| Mexico, MX      | 28   |
+| Sao Paulo, BR   | 30   |
+| Toronto, CA     | 33   |
 
 </td>
 <td>
 
-|POP name | POP code |
-|---------|----------|
-| London  | 22       |
+|     POP Name    | Code |
+|:---------------:|:----:|
+| London, UK      | 19   |
+| Amsterdam, NE   | 20   |
+| Paris, FR       | 21   |
+| Frankfurt, DE   | 22   |
+| Stockholm, SE   | 27   |
+| Warsaw, PL      | 29   |
+| Madrid, SP      | 31   |
 
 </td>
 <td>
 
-|POP name | POP code |
-|---------|----------|
-| Singapore | 33      |
+|     POP Name    | Code |
+|:---------------:|:----:|
+| Tokyo, JP       | 23   |
+| Sydney, AU      | 24   |
+| Singapore, SG   | 25   |
+| Korea, KR       | 26   |
+| Melbourne, AU   | 32   |
+| Mumbai, IN      | 35   |
 
 </td>
 </tr>
 </table>
-
-| POP  | Code |
-| ---- | ---- |
-| PNJ1 | 11   |
-| MIA1 | 12   |
-| CHI2 | 13   |
-| ATL2 | 14   |
-| DAL4 | 15   |
-| SEA2 | 16   |
-| LAX3 | 17   |
-| SJC1 | 18   |
-| LON3 | 19   |
-| AMS1 | 20   |
-| PAR3 | 21   |
-| FKT3 | 22   |
-| TYO1 | 23   |
-| AUS1 | 24   |
-| SGP1 | 25   |
-| KOR1 | 26   |
-| STO1 | 27   |
-| MEX1 | 28   |
-| WAW1 | 29   |
-| SAO1 | 30   |
-| TOR1 | 33   |
 
