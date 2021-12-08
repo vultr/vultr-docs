@@ -49,29 +49,33 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 </tr>
 <tr>
 <td>
+
 |POP name | POP code |
 |---------|----------|
 | New York | 11      |
-</td>
 
+</td>
 <td>
+
 |POP name | POP code |
 |---------|----------|
 | New York | 11      |
-</td>
 
+</td>
 <td>
+
 |POP name | POP code |
 |---------|----------|
 | London  | 22       |
-</td>
 
+</td>
 <td>
+
 |POP name | POP code |
 |---------|----------|
 | Singapore | 33      |
-</td>
 
+</td>
 </tr>
 </table>
 
