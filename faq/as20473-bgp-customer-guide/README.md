@@ -63,4 +63,6 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | KOR1 | 26   |
 | STO1 | 27   |
 | MEX1 | 28   |
+| WAW1 | 29   |
 | TOR1 | 33   |
+
