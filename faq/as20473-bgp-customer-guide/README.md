@@ -48,7 +48,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 <th>United States</th><th>Americas</th><th>Europe</th><th>Asia & Pacific</th>
 </tr>
 <tr>
-<td>
+<td valign="top">
 
 |     POP Name    | Code |
 |:---------------:|:----:|
@@ -71,7 +71,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | Toronto, CA     | 33   |
 
 </td>
-<td>
+<td valign="top">
 
 |     POP Name    | Code |
 |:---------------:|:----:|
@@ -84,7 +84,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | Madrid, SP      | 31   |
 
 </td>
-<td>
+<td valign="top">
 
 |     POP Name    | Code |
 |:---------------:|:----:|
