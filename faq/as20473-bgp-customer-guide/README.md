@@ -41,7 +41,7 @@ Customers may choose to influence prefixes advertised outside of AS20473 using t
 
 ## Location Communities
 
-Routes announced from AS20473 are also tagged with a 2­-digit community to provide information about the POP it was originated from. For example, 20473:nn. These locations are defined in the following table.
+Routes announced from AS20473 are also tagged with a 2­-digit community to provide information about the POP it was originated from. For example, 20473:11 are generated in Piscataway. These locations are defined in the following table.
 
 <table>
 <tr>
