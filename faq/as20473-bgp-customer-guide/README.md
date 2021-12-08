@@ -43,6 +43,38 @@ Customers may choose to influence prefixes advertised outside of AS20473 using t
 
 Routes announced from AS20473 are also tagged with a 2­-digit community to provide information about the POP it was originated from. For example, 20473:nn. These locations are defined in the following table.
 
+<table>
+<tr>
+<th>United States</th>Americas</th><th>Europe</th><th>Asia & Pacific</th>
+</tr>
+<tr>
+<td>
+|POP name | POP code |
+|---------|----------|
+| New York | 11      |
+</td>
+
+<td>
+|POP name | POP code |
+|---------|----------|
+| New York | 11      |
+</td>
+
+<td>
+|POP name | POP code |
+|---------|----------|
+| London  | 22       |
+</td>
+
+<td>
+|POP name | POP code |
+|---------|----------|
+| Singapore | 33      |
+</td>
+
+</tr>
+</table>
+
 | POP  | Code |
 | ---- | ---- |
 | PNJ1 | 11   |
