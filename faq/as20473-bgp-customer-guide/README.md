@@ -62,7 +62,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | San Jose, CA    | 18   |
 
 </td>
-<td style="vertical-align:top">
+<td style="width: 259px; vertical-align:top">
 
 |     POP Name    | Code |
 |:---------------:|:----:|
