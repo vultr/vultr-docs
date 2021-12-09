@@ -1,8 +1,10 @@
-# AS20473 BGP Customer Guide
+# AS20473 BGP communities customer guide
 
 Last updated: `2021-12-08`
 
-## Information Communities
+## Informational communities
+
+### Prefix type
 
 AS20473 tags prefixes that are learned or originated as follows:
 
@@ -16,30 +18,7 @@ AS20473 tags prefixes that are learned or originated as follows:
 | Originated by 20473                 | 20473:500             |
 | Prefix learned from AS number       | 20473:peer-as         |
 
-## Action Communities
-
-Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed onto our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
-
-|                                    |               |                    |
-| ---------------------------------- | ------------- | ------------------ |
-| Do not announce to specific AS     | 64600:peer-as | 20473:6000:peer-as |
-| Prepend 1x to specific AS          | 64601:peer-as | 20473:6001:peer-as |
-| Prepend 2x to specific AS          | 64602:peer-as | 20473:6002:peer-as |
-| Prepend 3x to specific AS          | 64603:peer-as | 20473:6003:peer-as |
-| Set Metric to 0 to specific AS     | 64609:peer-as | 20473:6009:peer-as |
-| Override 20473:6000 to specific AS | 64699:peer-as | 20473:6099:peer-as |
-| Do not announce to IXP peers       | 20473:6601    |                    |
-| Announce to IXP route servers only | 20473:6602    |                    |
-| Do not export out of AS20473       | 20473:6000    |                    |
-| Set Metric to 0 to all AS’s        | 20473:64609   |                    |
-| Prepend 1x to all AS’s             | 20473:6001    |                    |
-| Prepend 2x to all AS’s             | 20473:6002    |                    |
-| Prepend 3x to All AS’s             | 20473:6003    |                    |
-| Export blackhole to all AS’s       | 20473:666     |                    |
-
-
-
-## Location Communities
+### Location
 
 Routes announced from AS20473 are also tagged with a 2­-digit community to provide information about the POP it was originated from. For example, prefixes tagged with 20473:11 are generated in Piscataway. These locations are defined in the following table.
 
@@ -99,3 +78,28 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 </tr>
 </table>
 
+## Action communities
+
+Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed onto our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
+
+|                                    |               |                    |
+| ---------------------------------- | ------------- | ------------------ |
+| Do not announce to specific AS     | 64600:peer-as | 20473:6000:peer-as |
+| Prepend 1x to specific AS          | 64601:peer-as | 20473:6001:peer-as |
+| Prepend 2x to specific AS          | 64602:peer-as | 20473:6002:peer-as |
+| Prepend 3x to specific AS          | 64603:peer-as | 20473:6003:peer-as |
+| Set Metric to 0 to specific AS     | 64609:peer-as | 20473:6009:peer-as |
+| Override 20473:6000 to specific AS | 64699:peer-as | 20473:6099:peer-as |
+| Do not announce to IXP peers       | 20473:6601    |                    |
+| Announce to IXP route servers only | 20473:6602    |                    |
+| Do not export out of AS20473       | 20473:6000    |                    |
+| Set Metric to 0 to all AS’s        | 20473:64609   |                    |
+| Prepend 1x to all AS’s             | 20473:6001    |                    |
+| Prepend 2x to all AS’s             | 20473:6002    |                    |
+| Prepend 3x to All AS’s             | 20473:6003    |                    |
+| Export blackhole to all AS’s       | 20473:666     |                    |
+
+
+## Other BGP communities
+
+AS20473 transparently advertise communities set by its customers. Customers can use these communities to affect their inbound traffic in our different transit providers and IXPs.
