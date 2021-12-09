@@ -8,13 +8,12 @@ Last updated: `2021-12-08`
 
 AS20473 tags prefixes that are learned or originated as follows:
 
-| Prefix type                         | Value                 |
-| ----------------------------------- | --------------------- |
-| Customer prefix originated by 20473 | 20473:540             |
-| Prefix learned from Transit         | 20473:100             |
-| Prefix learned from Public Peer     | 20473:200             |
-| Prefix learned from Private Peer    | 20473:300             |
-| Prefix learned from Customer        | 20473:400, 20473:4000 |
+| Prefix type                         | Community             | Large Community
+| ----------------------------------- | --------------------- | ---------------
+| Prefix learned from Transit         | 20473:100             | 20473:100:transit-as
+| Prefix learned from Public Peer     | 20473:200             | 20473:200:ixp-as
+| Prefix learned from Private Peer    | 20473:300             | 20473:300:peer-as
+| Prefix learned from Customer        | 20473:400, 20473:4000 | 
 | Originated by 20473                 | 20473:500             |
 | Prefix learned from AS number       | 20473:peer-as         |
 
