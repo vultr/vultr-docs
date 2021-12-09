@@ -8,7 +8,7 @@ Last updated: `2021-12-08`
 
 AS20473 tags prefixes that are learned or originated as follows:
 
-|                                     |                       |
+| Prefix type                         | Value                 |
 | ----------------------------------- | --------------------- |
 | Customer prefix originated by 20473 | 20473:540             |
 | Prefix learned from Transit         | 20473:100             |
@@ -82,7 +82,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 
 Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed onto our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
 
-|                                    |               |                    |
+| Action                             | Community     | Large Community    |
 | ---------------------------------- | ------------- | ------------------ |
 | Do not announce to specific AS     | 64600:peer-as | 20473:6000:peer-as |
 | Prepend 1x to specific AS          | 64601:peer-as | 20473:6001:peer-as |
