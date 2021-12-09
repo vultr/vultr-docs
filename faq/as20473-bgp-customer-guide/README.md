@@ -1,6 +1,6 @@
 # AS20473 BGP communities customer guide
 
-Last updated: `2021-12-08`
+Last updated: `2021-12-09`
 
 ## Informational communities
 
@@ -13,8 +13,8 @@ AS20473 tags prefixes that are learned or originated as follows:
 | Prefix learned from Transit         | 20473:100             | 20473­:­100­:­transit-as
 | Prefix learned from Public Peer     | 20473:200             | 20473:200:ixp-as
 | Prefix learned from Private Peer    | 20473:300             | 20473:300:peer-as
-| Prefix learned from Customer        | 20473:400, 20473:4000 | 
-| Originated by 20473                 | 20473:500             |
+| Prefix originated by Customer       | 20473:400, 20473:4000 | 
+| Prefix originated by 20473          | 20473:500             |
 | Prefix learned from AS number       | 20473:peer-as         |
 
 ### Location
