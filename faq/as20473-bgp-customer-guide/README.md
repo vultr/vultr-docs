@@ -79,7 +79,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 
 ## Action Communities
 
-Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed onto our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
+Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed on to our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
 
 | Action                             | Community     | Large Community    |
 | ---------------------------------- | ------------- | ------------------ |
@@ -101,4 +101,4 @@ Customers may choose to influence prefixes advertised outside of AS20473 using t
 
 ## Other BGP Communities
 
-AS20473 transparently advertises communities set by its customers. Customers can use these communities to affect their inbound traffic in our different transit providers and IXPs.
+AS20473 transparently advertises communities set by its customers. Customers can use these communities to affect their inbound traffic from our different transit providers and IXPs.
