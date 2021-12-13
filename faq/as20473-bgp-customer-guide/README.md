@@ -1,10 +1,10 @@
-# AS20473 BGP communities customer guide
+# AS20473 BGP Communities Customer Guide
 
 Last updated: `2021-12-09`
 
-## Informational communities
+## Informational Communities
 
-### Prefix type
+### Prefix Type
 
 AS20473 tags prefixes that are learned or originated as follows:
 
@@ -77,7 +77,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 </tr>
 </table>
 
-## Action communities
+## Action Communities
 
 Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed onto our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
 
@@ -99,6 +99,6 @@ Customers may choose to influence prefixes advertised outside of AS20473 using t
 | Export blackhole to all AS’s       | 20473:666     |                    |
 
 
-## Other BGP communities
+## Other BGP Communities
 
-AS20473 transparently advertise communities set by its customers. Customers can use these communities to affect their inbound traffic in our different transit providers and IXPs.
+AS20473 transparently advertises communities set by its customers. Customers can use these communities to affect their inbound traffic in our different transit providers and IXPs.
