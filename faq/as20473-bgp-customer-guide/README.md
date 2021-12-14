@@ -1,26 +1,87 @@
-# AS20473 BGP Customer Guide
+# AS20473 BGP Communities Customer Guide
 
-Last updated: `2021-08-12`
+Last updated: `2021-12-13`
 
-## Information Communities
+## Informational Communities
+
+### Prefix Type
 
 AS20473 tags prefixes that are learned or originated as follows:
 
-|                                     |                       |
-| ----------------------------------- | --------------------- |
-| Customer prefix originated by 20473 | 20473:540             |
-| Prefix learned from Transit         | 20473:100             |
-| Prefix learned from Public Peer     | 20473:200             |
-| Prefix learned from Private Peer    | 20473:300             |
-| Prefix learned from Customer        | 20473:400, 20473:4000 |
-| Originated by 20473                 | 20473:500             |
+| Prefix type                         | Community             | Large Community
+| ----------------------------------- | --------------------- | ---------------
+| Prefix learned from Transit         | 20473:100             | 20473­:100­:transit-as
+| Prefix learned from Public Peer     | 20473:200             | 20473:200:ixp-as
+| Prefix learned from Private Peer    | 20473:300             | 20473:300:peer-as
+| Prefix originated by Customer       | 20473:400, 20473:4000 | 
+| Prefix originated by 20473          | 20473:500             |
 | Prefix learned from AS number       | 20473:peer-as         |
+
+### Location
+
+Routes announced from AS20473 are also tagged with a 2­-digit community to provide information about the POP it was originated from. For example, prefixes tagged with 20473:11 are generated in Piscataway. These locations are defined in the following table.
+
+<table>
+<tr>
+<th>United States</th><th>Americas</th><th>Europe</th><th>Asia & Pacific</th>
+</tr>
+<tr>
+<td valign="top">
+
+|     POP Name    | Code |
+|:----------------|:----:|
+| Piscataway, NJ  | 11   |
+| Miami, FL       | 12   |
+| Chicago, IL     | 13   |
+| Atlanta, GA     | 14   |
+| Dallas, TX      | 15   |
+| Seattle, WA     | 16   |
+| Los Angeles, CA | 17   |
+| San Jose, CA    | 18   |
+
+</td>
+<td valign="top">
+
+|     POP Name    | Code |
+|:----------------|:----:|
+| Mexico, MX      | 28   |
+| Sao Paulo, BR   | 30   |
+| Toronto, CA     | 33   |
+
+</td>
+<td valign="top">
+
+|     POP Name    | Code |
+|:----------------|:----:|
+| London, UK      | 19   |
+| Amsterdam, NE   | 20   |
+| Paris, FR       | 21   |
+| Frankfurt, DE   | 22   |
+| Stockholm, SE   | 27   |
+| Warsaw, PL      | 29   |
+| Madrid, SP      | 31   |
+
+</td>
+<td valign="top">
+
+|     POP Name    | Code |
+|:----------------|:----:|
+| Tokyo, JP       | 23   |
+| Sydney, AU      | 24   |
+| Singapore, SG   | 25   |
+| Korea, KR       | 26   |
+| Melbourne, AU   | 32   |
+| Mumbai, IN      | 35   |
+
+</td>
+</tr>
+</table>
 
 ## Action Communities
 
-Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed onto our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
+Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed on to our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
 
-|                                    |               |                    |
+| Action                             | Community     | Large Community    |
 | ---------------------------------- | ------------- | ------------------ |
 | Do not announce to specific AS     | 64600:peer-as | 20473:6000:peer-as |
 | Prepend 1x to specific AS          | 64601:peer-as | 20473:6001:peer-as |
@@ -38,31 +99,6 @@ Customers may choose to influence prefixes advertised outside of AS20473 using t
 | Export blackhole to all AS’s       | 20473:666     |                    |
 
 
+## Other BGP Communities
 
-## Location Communities
-
-Routes announced from AS20473 are also tagged with a 2­-digit community to provide information about the POP it was originated from. For example, 20473:nn. These locations are defined in the following table.
-
-| POP  | Code |
-| ---- | ---- |
-| PNJ1 | 11   |
-| MIA1 | 12   |
-| CHI2 | 13   |
-| ATL2 | 14   |
-| DAL4 | 15   |
-| SEA2 | 16   |
-| LAX3 | 17   |
-| SJC1 | 18   |
-| LON3 | 19   |
-| AMS1 | 20   |
-| PAR3 | 21   |
-| FKT3 | 22   |
-| TYO1 | 23   |
-| AUS1 | 24   |
-| SGP1 | 25   |
-| KOR1 | 26   |
-| STO1 | 27   |
-| MEX1 | 28   |
-| WAW1 | 29   |
-| TOR1 | 33   |
-
+AS20473 transparently advertises communities set by its customers. Customers can use these communities to affect their inbound traffic from our different transit providers and IXPs.
