@@ -1,0 +1,12 @@
+apiVersion: pxc.percona.com/v1
+kind: PerconaXtraDBClusterRestore
+metadata:
+  name: restore-002
+spec:
+  pxcCluster: db-cluster
+  backupName: backup-001
+  pitr:
+    type: date
+    date: "2022-01-09 13:35:30"
+    backupSource:
+      storageName: s3-vultr
