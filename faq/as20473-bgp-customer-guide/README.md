@@ -1,12 +1,12 @@
 # AS20473 BGP Communities Customer Guide
 
-Last updated: `2021-12-13`
+Last updated: `2022-04-19`
 
 ## Informational Communities
 
 ### Prefix Type
 
-AS20473 tags prefixes that are learned or originated as follows:
+AS20473 tags prefixes that are learned or originated as follows:
 
 | Prefix type                         | Community             | Large Community
 | ----------------------------------- | --------------------- | ---------------
@@ -30,14 +30,15 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 
 |     POP Name    | Code |
 |:----------------|:----:|
-| Piscataway, NJ  | 11   |
-| Miami, FL       | 12   |
-| Chicago, IL     | 13   |
 | Atlanta, GA     | 14   |
+| Chicago, IL     | 13   |
 | Dallas, TX      | 15   |
-| Seattle, WA     | 16   |
+| Honolulu, HI    | 34   |
 | Los Angeles, CA | 17   |
+| Miami, FL       | 12   |
+| Piscataway, NJ  | 11   |
 | San Jose, CA    | 18   |
+| Seattle, WA     | 16   |
 
 </td>
 <td valign="top">
@@ -53,29 +54,35 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 
 |     POP Name    | Code |
 |:----------------|:----:|
-| London, UK      | 19   |
-| Amsterdam, NE   | 20   |
-| Paris, FR       | 21   |
+| Amsterdam, NL   | 20   |
 | Frankfurt, DE   | 22   |
+| London, GB      | 19   |
+| Madrid, ES      | 31   |
+| Paris, FR       | 21   |
 | Stockholm, SE   | 27   |
 | Warsaw, PL      | 29   |
-| Madrid, SP      | 31   |
 
 </td>
 <td valign="top">
 
 |     POP Name    | Code |
 |:----------------|:----:|
-| Tokyo, JP       | 23   |
-| Sydney, AU      | 24   |
-| Singapore, SG   | 25   |
 | Korea, KR       | 26   |
 | Melbourne, AU   | 32   |
 | Mumbai, IN      | 35   |
+| Singapore, SG   | 25   |
+| Sydney, AU      | 24   |
+| Tokyo, JP       | 23   |
 
 </td>
 </tr>
 </table>
+
+Large communities are also used for location with the following format `20473:0:3RRRCCC1PP` where:
+
+- `RRR` is the [M49 region code](https://unstats.un.org/unsd/methodology/m49/#geo-regions)
+- `CCC` is the [M49 country code](https://unstats.un.org/unsd/methodology/m49/#countries)
+- `PP` is the location code as explained above
 
 ## Action Communities
 
