@@ -67,9 +67,11 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 
 |     POP Name    | Code |
 |:----------------|:----:|
+| Bangalore, IN   | 43   |
 | Korea, KR       | 26   |
 | Melbourne, AU   | 32   |
 | Mumbai, IN      | 35   |
+| New Delhi, IN.  | 44   |
 | Singapore, SG   | 25   |
 | Sydney, AU      | 24   |
 | Tokyo, JP       | 23   |
