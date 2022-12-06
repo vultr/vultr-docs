@@ -23,7 +23,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 
 <table>
 <tr>
-<th>United States</th><th>Americas</th><th>Europe</th><th>Asia & Pacific</th><th>Africa</th>
+<th>United States</th><th>Americas</th><th>Europe</th>
 </tr>
 <tr>
 <td valign="top">
@@ -63,6 +63,13 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | Warsaw, PL      | 29   |
 
 </td>
+</tr>
+</table>
+<table>
+<tr>
+<th>Asia & Pacific</th><th>Africa</th>
+</tr>
+<tr>
 <td valign="top">
 
 |     POP Name    | Code |
