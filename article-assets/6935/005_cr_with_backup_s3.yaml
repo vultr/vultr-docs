@@ -1,0 +1,59 @@
+apiVersion: pxc.percona.com/v1-10-0
+kind: PerconaXtraDBCluster
+metadata:
+  name: db-cluster
+spec:
+  crVersion: 1.10.0
+  secretsName: db-cluster-secrets
+  allowUnsafeConfigurations: true
+  upgradeOptions:
+    apply: 8.0-recommended
+    schedule: "0 4 * * *"
+  pxc:
+    size: 3
+    image: percona/percona-xtradb-cluster:8.0.23-14.1
+    autoRecovery: true
+    volumeSpec:
+      persistentVolumeClaim:
+        storageClassName: vultr-block-storage
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 15G
+  haproxy:
+    enabled: true
+    size: 3
+    image: percona/percona-xtradb-cluster-operator:1.10.0-haproxy
+    serviceType: LoadBalancer
+    replicasServiceType: LoadBalancer
+  logcollector:
+    enabled: true
+    image: percona/percona-xtradb-cluster-operator:1.10.0-logcollector
+  backup:
+    image: perconalab/percona-xtradb-cluster-operator:main-pxc8.0-backup
+    pitr:
+      enabled: true
+      storageName: s3-vultr
+      timeBetweenUploads: 60
+    storages:
+      s3-vultr:
+        type: s3
+        s3:
+          bucket: db-cluster-backup
+          credentialsSecret: vultr-s3-secret
+          endpointUrl: https://<insert_vultr_s3_endpoint_here>
+      s3-offsite:
+        type: s3
+        s3:
+          bucket: db-cluster-offsite-backup
+          credentialsSecret: offsite-s3-secret
+          endpointUrl: https://<insert_offsite_s3_endpoint_here>
+    schedule:
+      - name: "daily-backup-vultr"
+        schedule: "0 0 * * *"
+        keep: 10
+        storageName: s3-vultr
+      - name: "daily-backup-offsite"
+        schedule: "0 0 * * *"
+        keep: 10
+        storageName: s3-offsite
