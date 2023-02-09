@@ -55,9 +55,6 @@
     -----END PGP PUBLIC KEY BLOCK-----
     ENDFILE
     )
-    
     $ echo "deb [signed-by=/usr/share/keyrings/vultr-apprepo.gpg] https://apprepo.vultr.com/${OS} universal main" > /etc/apt/sources.list.d/vultr-apprepo.list
-    
     $ echo "${APPREPO_KEY}" | gpg --dearmor > /usr/share/keyrings/vultr-apprepo.gpg
-    
     $ apt update -y

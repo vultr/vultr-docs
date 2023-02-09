@@ -63,9 +63,6 @@
     gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-apprepo
     ENDFILE
     )
-
     $ echo "${RHEL_REPO}" > /etc/yum.repos.d/vultr-apprepo.repo
-    
     $ echo "${APPREPO_KEY}" > /etc/pki/rpm-gpg/RPM-GPG-KEY-apprepo
-    
     $ update-crypto-policies --set DEFAULT:SHA1 || true
