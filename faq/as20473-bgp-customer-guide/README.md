@@ -1,6 +1,6 @@
 # AS20473 BGP Communities Customer Guide
 
-Last updated: `2022-04-19`
+Last updated: `2023-02-17`
 
 ## Informational Communities
 
@@ -46,6 +46,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 |     POP Name    | Code |
 |:----------------|:----:|
 | Mexico, MX      | 28   |
+| Santiago, CL    | 42   |
 | Sao Paulo, BR   | 30   |
 | Toronto, CA     | 33   |
 
@@ -78,7 +79,8 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | Korea, KR       | 26   |
 | Melbourne, AU   | 32   |
 | Mumbai, IN      | 35   |
-| New Delhi, IN.  | 44   |
+| New Delhi, IN   | 44   |
+| Osaka, JP       | 45
 | Singapore, SG   | 25   |
 | Sydney, AU      | 24   |
 | Tokyo, JP       | 23   |
