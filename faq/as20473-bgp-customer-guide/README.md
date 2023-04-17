@@ -106,6 +106,8 @@ Large communities are also used for location with the following format `20473:0:
 
 Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed on to our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
 
+**IXP route servers use large communities only!**
+
 | Action                             | Community     | Large Community    |
 | ---------------------------------- | ------------- | ------------------ |
 | Do not announce to specific AS     | 64600:peer-as | 20473:6000:peer-as |
