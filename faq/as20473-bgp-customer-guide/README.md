@@ -59,6 +59,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | Frankfurt, DE   | 22   |
 | London, GB      | 19   |
 | Madrid, ES      | 31   |
+| Manchester, GB  | 46   |
 | Paris, FR       | 21   |
 | Stockholm, SE   | 27   |
 | Warsaw, PL      | 29   |
@@ -68,7 +69,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 </table>
 <table>
 <tr>
-<th>Asia & Pacific</th><th>Africa</th>
+<th>Asia</th><th>Australia</th><th>Africa</th>
 </tr>
 <tr>
 <td valign="top">
@@ -77,13 +78,20 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 |:----------------|:----:|
 | Bangalore, IN   | 43   |
 | Korea, KR       | 26   |
-| Melbourne, AU   | 32   |
 | Mumbai, IN      | 35   |
 | New Delhi, IN   | 44   |
-| Osaka, JP       | 45
+| Osaka, JP       | 45   |
 | Singapore, SG   | 25   |
-| Sydney, AU      | 24   |
+| Tel Aviv, IL    | 36   |
 | Tokyo, JP       | 23   |
+
+</td>
+<td valign="top">
+
+|     POP Name    | Code |
+|:----------------|:----:|
+| Melbourne, AU   | 32   |
+| Sydney, AU      | 24   |
 
 </td>
 <td valign="top">
