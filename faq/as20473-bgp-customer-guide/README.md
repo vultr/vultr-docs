@@ -1,6 +1,6 @@
 # AS20473 BGP Communities Customer Guide
 
-Last updated: `2023-02-17`
+Last updated: `2023-05-02`
 
 ## Informational Communities
 
