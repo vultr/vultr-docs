@@ -8,14 +8,15 @@ Last updated: `2023-05-02`
 
 AS20473 tags prefixes that are learned or originated as follows:
 
-| Prefix type                         | Community             | Large Community
-| ----------------------------------- | --------------------- | ---------------
-| Prefix learned from Transit         | 20473:100             | 20473­:100­:transit-as
-| Prefix learned from Public Peer     | 20473:200             | 20473:200:ixp-as
-| Prefix learned from Private Peer    | 20473:300             | 20473:300:peer-as
-| Prefix originated by Customer       | 20473:400, 20473:4000 | 
-| Prefix originated by 20473          | 20473:500             |
-| Prefix learned from AS number       | 20473:peer-as         |
+| Prefix type                                           | Community             | Large Community
+| ----------------------------------------------------- | --------------------- | ---------------
+| Prefix learned from Transit                           | 20473:100             | 20473­:100­:transit-as
+| Prefix learned from Public Peer via route servers     | 20473:200             | 20473:200:ixp-as
+| Prefix learned from Public Peer via bilateral peering | 20473:200             | 20473:200:ixp-as, 20473:200:peer-as
+| Prefix learned from Private Peer                      | 20473:300             | 20473:300:peer-as
+| Prefix originated by Customer                         | 20473:400, 20473:4000 | 
+| Prefix originated by 20473                            | 20473:500             |
+| Prefix learned from AS number (if <= 65535)           | 20473:peer-as         |
 
 ### Location
 
