@@ -1,6 +1,6 @@
 # AS20473 BGP Communities Customer Guide
 
-Last updated: `2023-05-02`
+Last updated: `2024-07-25`
 
 ## Informational Communities
 
@@ -14,9 +14,9 @@ AS20473 tags prefixes that are learned or originated as follows:
 | Prefix learned from Public Peer via route servers     | 20473:200             | 20473:200:ixp-as
 | Prefix learned from Public Peer via bilateral peering | 20473:200             | 20473:200:ixp-as, 20473:200:peer-as
 | Prefix learned from Private Peer                      | 20473:300             | 20473:300:peer-as
-| Prefix originated by Customer                         | 20473:400, 20473:4000 | 
+| Prefix originated by Customer                         | 20473:4000            | 
 | Prefix originated by 20473                            | 20473:500             |
-| Prefix learned from AS number (if <= 65535)           | 20473:peer-as         |
+| Prefix learned from AS number (if <= 65535)           | 20473:peer-as         | 20473:peer-type:peer-as
 
 ### Location
 
@@ -113,27 +113,26 @@ Large communities are also used for location with the following format `20473:0:
 
 ## Action Communities
 
-Customers may choose to influence prefixes advertised outside of AS20473 using the communities below. Customers may also add 3rd party communities which are passed on to our providers and peers. We have incorporated some large communities to support actions on 32-bit autonomous system numbers.
+Customers may choose to influence traffic for prefixes advertised outside of AS20473 using the communities below. Customers may also add third party communities which are passed on to our providers and peers. We have incorporated large communities to support actions on 32-bit autonomous system numbers.
 
 **IXP route servers use large communities only!**
 
 | Action                             | Community     | Large Community    |
 | ---------------------------------- | ------------- | ------------------ |
-| Do not announce to specific AS     | 64600:peer-as | 20473:6000:peer-as |
+| Do not advertise to specific AS    | 64600:peer-as | 20473:6000:peer-as |
 | Prepend 1x to specific AS          | 64601:peer-as | 20473:6001:peer-as |
 | Prepend 2x to specific AS          | 64602:peer-as | 20473:6002:peer-as |
 | Prepend 3x to specific AS          | 64603:peer-as | 20473:6003:peer-as |
 | Set Metric to 0 to specific AS     | 64609:peer-as | 20473:6009:peer-as |
 | Override 20473:6000 to specific AS | 64699:peer-as | 20473:6099:peer-as |
+| Do not advertise out of AS20473    | 20473:6000    |                    |
+| Prepend 1x to all peers            | 20473:6001    |                    |
+| Prepend 2x to all peers            | 20473:6002    |                    |
+| Prepend 3x to all peers            | 20473:6003    |                    |
+| Set Metric to 0 to all peers       | 20473:64609   |                    |
 | Do not announce to IXP peers       | 20473:6601    |                    |
 | Announce to IXP route servers only | 20473:6602    |                    |
-| Do not export out of AS20473       | 20473:6000    |                    |
-| Set Metric to 0 to all AS’s        | 20473:64609   |                    |
-| Prepend 1x to all AS’s             | 20473:6001    |                    |
-| Prepend 2x to all AS’s             | 20473:6002    |                    |
-| Prepend 3x to All AS’s             | 20473:6003    |                    |
-| Export blackhole to all AS’s       | 20473:666     |                    |
-
+| Export blackhole to all peers      | 20473:666     |                    |
 
 ## Other BGP Communities
 
