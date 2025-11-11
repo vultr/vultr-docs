@@ -38,6 +38,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | Los Angeles, CA | 17   |
 | Miami, FL       | 12   |
 | Piscataway, NJ  | 11   |
+| Saint Louis, MO | 47   |
 | San Jose, CA    | 18   |
 | Seattle, WA     | 16   |
 
@@ -61,6 +62,7 @@ Routes announced from AS20473 are also tagged with a 2­-digit community to prov
 | London, GB      | 19   |
 | Madrid, ES      | 31   |
 | Manchester, GB  | 46   |
+| Milan, IT       | 38   |
 | Paris, FR       | 21   |
 | Stockholm, SE   | 27   |
 | Warsaw, PL      | 29   |
